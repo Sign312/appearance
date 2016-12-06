@@ -1,0 +1,88 @@
+@import "compass/css3";
+@import "function";
+@import "mixin";
+@import "reset";
+
+.content {
+  height: px2rem(1336px);
+  width: px2rem(750px);
+  background: url("/images/index_global_background.png");
+  @include background-size(cover);
+
+  .container {
+    width: px2rem(680px);
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    @include clear-folder;
+
+    .main-content {
+
+      .title-box {
+        margin-top: px2rem(78px);
+        background: black;
+        height: px2rem(220px);
+        @include opacity(0.1);
+        @include border-radius(px2rem(10px));
+      }
+
+      .appearance-text {
+        position: absolute;
+        left: 50%;
+        margin-left: px2rem(-263px);
+        top: px2rem(176px);
+        height: px2rem(100px);
+        width: px2rem(526px);
+        background: url("/images/appearance_text_03.png") center no-repeat;
+        @include background-size(contain);
+      }
+
+      .login-box {
+        @include box-sizing(border-box);
+        margin-top: px2rem(16px);
+        @include clear-folder;
+        height: px2rem(866px);
+        background: rgba(255, 255, 255, 0.2);
+        @include border-radius(px2rem(10px));
+
+        padding-top:px2rem(158px);
+
+        .input-wrapper {
+          width: px2rem(648px);
+          margin: 0 auto;
+          margin-top:px2rem(92px);
+        }
+
+        .username {
+          &:before {
+            width: px2rem(50px);
+            height: px2rem(50px);
+            top:px2rem(30px);
+            left: px2rem(42px);
+            content: '';
+            position: absolute;
+            background: url("/images/username_pattern_03.png") center no-repeat;
+            @include background-size(cover);
+          }
+        }
+
+        .password {
+          &:before {
+            width: px2rem(50px);
+            height: px2rem(60px);
+            top:px2rem(26px);
+            left:px2rem(42px);
+            content: '';
+            position: absolute;
+            background: url("/images/password_pattern_06.png") center no-repeat;
+            @include background-size(cover);
+          }
+        }
+
+
+      }
+
+    }
+
+  }
+}

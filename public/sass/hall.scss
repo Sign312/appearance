@@ -1,0 +1,60 @@
+@import "compass/css3";
+@import "function";
+@import "mixin";
+@import "reset";
+@import "common";
+
+.focus-list {
+  display: none;
+  width: 100%;
+  .item {
+    display: block;
+    border: 1px solid darkgrey;
+    height: px2rem(280px);
+    position: relative;
+    margin-bottom:px2rem(20px);
+
+    img {
+      width: px2rem(200px);
+      height: px2rem(200px);
+      position: absolute;
+      top: px2rem(40px);
+      left: px2rem(30px);
+    }
+
+    .details {
+      position: absolute;
+      top:px2rem(40px);
+      left: px2rem(260px);
+      width: px2rem(400px);
+
+      .title {
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .text {
+        margin-top:px2rem(30px);
+      }
+
+      .heart {
+        width:px2rem(42px);
+        height:px2rem(42px);
+        position: absolute;
+        top:px2rem(180px);
+        right: px2rem(-19px);
+        background: url("/images/heart.png") center no-repeat;
+        @include background-size(cover);
+        @include opacity(.5);
+        @include transition(all 1s);
+        &.active {
+          @include opacity(1);
+        }
+        &.rise {
+          top: px2rem(100px);
+          @include opacity(0);
+        }
+      }
+    }
+  }
+}

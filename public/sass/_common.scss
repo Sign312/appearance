@@ -1,0 +1,51 @@
+@import "compass/css3";
+@import "variable";
+@import "function";
+
+header.header {
+  height: px2rem(172px);
+  background: url("/images/header_background_01.png") no-repeat;
+  @include background-size(100% 100%);
+
+  .return {
+    height: px2rem(172px);
+    width: px2rem(250px);
+  }
+}
+
+.controller-bar {
+  @include height-as-lineheight(px2rem(128px));
+  background: #5f91a9;
+  @include clear-folder;
+  .controller {
+    color: white;
+    font-size: 19px;
+    font-weight: 500;
+    padding: px2rem(20px) px2rem(38px);
+    margin: 0 px2rem(30px);
+    &.active {
+      color: black;
+      @include border-radius(px2rem(80px));
+      border: 1px solid #8fb2c3;
+    }
+  }
+}
+
+.tip-bar {
+  background: $background-blue;
+  @include height-as-lineheight(px2rem(62px));
+  padding-left:px2rem(30px);
+}
+
+.top-list {
+  @include clear-float;
+  .item {
+    float: left;
+    width: px2rem(370px);
+    height: px2rem(400px);
+    @include background-size(cover);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid white;
+  }
+}

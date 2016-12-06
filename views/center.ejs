@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script src="/lib/lib-flexible-master/build/flexible.js"></script>
+    <title>center</title>
+    <link rel="stylesheet" href="/stylesheets/center.css">
+</head>
+<body>
+<div class="content">
+    <header class="header">
+        <div class="return"></div>
+    </header>
+    <section class="center-top">
+        <span class="heart-num">
+            95
+        </span>
+    </section>
+    <div class="main-content">
+        <div class="intro-bar">
+            <div class="intro-item">
+                <div class="number">26</div>
+                <div class="column">照片</div>
+            </div>
+            <div class="intro-item">
+                <div class="number">7</div>
+                <div class="column">关注</div>
+            </div>
+            <div class="intro-item">
+                <div class="number">48</div>
+                <div class="column">留言</div>
+            </div>
+        </div>
+        <div class="top-list" id="top_list">
+            <a class="item" href="#" imgsrc="/images/item_image_01.png">
+
+            </a>
+            <a class="item" href="#" imgsrc="/images/item_image_02.png">
+
+            </a>
+            <a class="item" href="#" imgsrc="/images/item_image_03.png">
+
+            </a>
+            <a class="item" href="#" imgsrc="/images/item_image_04.png">
+
+            </a>
+            <a class="item" href="#" imgsrc="/images/item_image_05.png">
+
+            </a>
+            <a class="item" href="#" imgsrc="/images/item_image_06.png">
+
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/lib/jquery_v3.js"></script>
+<script>
+    $('#top_list').children('.item').map(function () {
+        $(this).css({
+            'background-image': 'url(' + $(this).attr('imgsrc') + ')',
+        })
+    });
+    $('.return').on('click',function(){
+        history.back();
+    });
+</script>
+</html>

@@ -1,0 +1,210 @@
+/* line 5, ../sass/_reset.scss */
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  font-family: "Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", "\5b8b\4f53", sans-serif;
+}
+
+/* line 12, ../sass/_reset.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 17, ../sass/_reset.scss */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* line 22, ../sass/_reset.scss */
+input[type=text], input[type=password] {
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+  padding-left: 1.76rem;
+  height: 1.49333rem;
+  line-height: 1.49333rem;
+  -moz-border-radius: 0.66667rem;
+  -webkit-border-radius: 0.66667rem;
+  border-radius: 0.66667rem;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 34, ../sass/_reset.scss */
+input[type=submit] {
+  height: 1.49333rem;
+  line-height: 1.49333rem;
+  -moz-border-radius: 0.66667rem;
+  -webkit-border-radius: 0.66667rem;
+  border-radius: 0.66667rem;
+  border: none;
+  background: #528c75;
+  color: white;
+  font-size: 24px;
+  width: 100%;
+}
+
+/* line 42, ../sass/_reset.scss */
+.input-wrapper {
+  position: relative;
+}
+
+/* line 29, ../sass/_mixin.scss */
+*[placeholder] {
+  color: white;
+}
+
+/* line 33, ../sass/_mixin.scss */
+*::-webkit-input-placeholder {
+  color: white;
+}
+
+/* line 37, ../sass/_mixin.scss */
+*:-moz-placeholder {
+  color: white;
+}
+
+/* line 41, ../sass/_mixin.scss */
+*:-ms-input-placeholder {
+  color: white;
+}
+
+/* line 45, ../sass/_mixin.scss */
+*::-moz-placeholder {
+  color: white;
+}
+
+/* line 5, ../sass/_common.scss */
+header.header {
+  height: 2.29333rem;
+  background: url("/images/header_background_01.png") no-repeat;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+/* line 10, ../sass/_common.scss */
+header.header .return {
+  height: 2.29333rem;
+  width: 3.33333rem;
+}
+
+/* line 16, ../sass/_common.scss */
+.controller-bar {
+  height: 1.70667rem;
+  line-height: 1.70667rem;
+  background: #5f91a9;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .1px;
+}
+/* line 20, ../sass/_common.scss */
+.controller-bar .controller {
+  color: white;
+  font-size: 19px;
+  font-weight: 500;
+  padding: 0.26667rem 0.50667rem;
+  margin: 0 0.4rem;
+}
+/* line 26, ../sass/_common.scss */
+.controller-bar .controller.active {
+  color: black;
+  -moz-border-radius: 1.06667rem;
+  -webkit-border-radius: 1.06667rem;
+  border-radius: 1.06667rem;
+  border: 1px solid #8fb2c3;
+}
+
+/* line 34, ../sass/_common.scss */
+.tip-bar {
+  background: #a3cbde;
+  height: 0.82667rem;
+  line-height: 0.82667rem;
+  padding-left: 0.4rem;
+}
+
+/* line 10, ../sass/_mixin.scss */
+.top-list:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+/* line 42, ../sass/_common.scss */
+.top-list .item {
+  float: left;
+  width: 4.93333rem;
+  height: 5.33333rem;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid white;
+}
+
+/* line 8, ../sass/center.scss */
+.center-top {
+  background: url("/images/center_top_background_02.png") center no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 4.26667rem;
+  position: relative;
+}
+/* line 13, ../sass/center.scss */
+.center-top .heart-num {
+  position: absolute;
+  color: white;
+  font-size: 19px;
+  top: 0.98667rem;
+  left: 1.62667rem;
+  font-weight: 500;
+}
+
+/* line 23, ../sass/center.scss */
+.intro-bar {
+  height: 2.66667rem;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/* line 32, ../sass/center.scss */
+.intro-bar .intro-item {
+  height: 2.66667rem;
+  width: 3.33333rem;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .1px;
+  text-align: center;
+}
+/* line 37, ../sass/center.scss */
+.intro-bar .intro-item .number {
+  margin-top: 0.64rem;
+  font-size: 18px;
+  font-weight: 800;
+  color: orangered;
+}
+/* line 43, ../sass/center.scss */
+.intro-bar .intro-item .column {
+  margin-top: 0.10667rem;
+  font-size: 17px;
+}

@@ -1,0 +1,48 @@
+@import "function";
+
+@mixin clear-folder() {
+  //border: px2rem(3px) solid transparent;
+  @include box-sizing(border-box);
+  padding: .1px;
+}
+
+@mixin clear-float() {
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}
+
+@mixin height-as-lineheight($lineheight) {
+  height: $lineheight;
+  line-height: $lineheight;
+}
+
+@mixin bar-default {
+  @include height-as-lineheight(px2rem(112px));
+  @include border-radius(px2rem(50px));
+  border: none;
+}
+
+@mixin placeholder-color($color) {
+  *[placeholder] {
+    color: white;
+  }
+
+  *::-webkit-input-placeholder {
+    color: white;
+  }
+
+  *:-moz-placeholder {
+    color: white;
+  }
+
+  *:-ms-input-placeholder {
+    color: white;
+  }
+
+  *::-moz-placeholder {
+    color: white;
+  }
+}

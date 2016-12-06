@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script src="/lib/lib-flexible-master/build/flexible.js"></script>
+    <title>hall</title>
+    <link rel="stylesheet" href="/stylesheets/hall.css">
+</head>
+<body>
+<div class="content">
+    <header class="header">
+        <div class="return"></div>
+    </header>
+    <section class="controller-bar">
+        <span class="controller active" id="top_toggle">Top榜</span>
+        <span class="controller" id="focus_toggle">关&nbsp;&nbsp;&nbsp;注</span>
+        <a href="/center.html" class="controller">&nbsp;&nbsp;我</a>
+    </section>
+    <section class="tip-bar">
+        推荐关注
+    </section>
+    <div class="main-content">
+        <div class="top-list" id="top_list">
+            <a class="item" href="#" imgsrc="/images/item_image_01.png">
+
+            </a>
+            <a class="item" href="#" imgsrc="/images/item_image_02.png">
+
+            </a>
+            <a class="item" href="#" imgsrc="/images/item_image_03.png">
+
+            </a>
+            <a class="item" href="#" imgsrc="/images/item_image_04.png">
+
+            </a>
+            <a class="item" href="#" imgsrc="/images/item_image_05.png">
+
+            </a>
+            <a class="item" href="#" imgsrc="/images/item_image_06.png">
+
+            </a>
+            <a class="item" href="#" imgsrc="/images/item_image_01.png">
+
+            </a>
+            <a class="item" href="#" imgsrc="/images/item_image_02.png">
+
+            </a>
+            <a class="item" href="#" imgsrc="/images/item_image_03.png">
+
+            </a>
+            <a class="item" href="#" imgsrc="/images/item_image_04.png">
+
+            </a>
+            <a class="item" href="#" imgsrc="/images/item_image_05.png">
+
+            </a>
+            <a class="item" href="#" imgsrc="/images/item_image_06.png">
+
+            </a>
+        </div>
+        <div class="focus-list" id="focus_list">
+            <div class="item">
+                <img src="/images/item_image_01.png" alt="">
+                <div class="details">
+                    <div class="title">
+                        空自凝眸
+                    </div>
+                    <div class="text">
+                        感谢所有的相遇与重逢， 愿遇见的每个善意与美好， 有酒有肉有远方。
+                    </div>
+                    <div class="heart"></div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/images/item_image_02.png" alt="">
+                <div class="details">
+                    <div class="title">
+                        台风过境
+                    </div>
+                    <div class="text">
+                        台風が通過.
+                    </div>
+                    <div class="heart"></div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/images/item_image_03.png" alt="">
+                <div class="details">
+                    <div class="title">
+                        黑塞
+                    </div>
+                    <div class="text">
+                        我要这天
+                        再遮不住我眼
+                    </div>
+                    <div class="heart"></div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/images/item_image_01.png" alt="">
+                <div class="details">
+                    <div class="title">
+                        空自凝眸
+                    </div>
+                    <div class="text">
+                        感谢所有的相遇与重逢， 愿遇见的每个善意与美好， 有酒有肉有远方。
+                    </div>
+                    <div class="heart"></div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/images/item_image_02.png" alt="">
+                <div class="details">
+                    <div class="title">
+                        台风过境
+                    </div>
+                    <div class="text">
+                        台風が通過.
+                    </div>
+                    <div class="heart"></div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/images/item_image_03.png" alt="">
+                <div class="details">
+                    <div class="title">
+                        黑塞
+                    </div>
+                    <div class="text">
+                        我要这天
+                        再遮不住我眼
+                    </div>
+                    <div class="heart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/lib/jquery_v3.js"></script>
+<script>
+    $('#top_list').children('.item').map(function () {
+        $(this).css({
+            'background-image': 'url(' + $(this).attr('imgsrc') + ')',
+        })
+    });
+    $('#top_toggle').on('click', function () {
+        $('.main-content').children().css({
+            display: 'none',
+        });
+        $('.controller-bar').children().removeClass('active');
+        $(this).addClass('active');
+        $('#top_list').css({
+            display: 'block',
+        });
+    });
+    $('#focus_toggle').on('click', function () {
+        $('.main-content').children().css({
+            display: 'none',
+        });
+        $('.controller-bar').children().removeClass('active');
+        $(this).addClass('active');
+        $('#focus_list').css({
+            display: 'block',
+        });
+    });
+    $('.heart').on('click', function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).parent().children('.rise').remove();
+        } else {
+            var $copy_heart = $(this).clone(true);
+            $(this).parent().append($copy_heart);
+            $(this).addClass('rise'),
+                    $copy_heart.addClass('active');
+        }
+    });
+
+    $('.return').on('click',function(){
+        history.back();
+    });
+</script>
+</html>

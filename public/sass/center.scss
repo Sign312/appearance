@@ -1,0 +1,48 @@
+@import "compass/css3";
+@import "variable";
+@import "function";
+@import "mixin";
+@import "reset";
+@import "common";
+
+.center-top {
+  background: url("/images/center_top_background_02.png") center no-repeat;
+  @include background-size(cover);
+  height: px2rem(320px);
+  position: relative;
+  .heart-num {
+    position: absolute;
+    color: white;
+    font-size: 19px;
+    top:px2rem(74px);
+    left: px2rem(122px);
+    font-weight: 500;
+  }
+}
+
+.intro-bar {
+  height:px2rem(200px);
+
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(nowrap);
+  @include justify-content(center);
+  @include align-items(center);
+
+  .intro-item {
+    height:px2rem(200px);
+    width: px2rem(250px);
+    @include clear-folder;
+    text-align: center;
+    .number {
+      margin-top:px2rem(48px);
+      font-size: 18px;
+      font-weight: 800;
+      color: orangered;
+    }
+    .column {
+      margin-top:px2rem(8px);
+      font-size: 17px;
+    }
+  }
+}
