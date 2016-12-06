@@ -1,5 +1,7 @@
 用[flexible可伸缩布局方案](https://github.com/amfe/lib-flexible)做的demo
 
+在线demo示例:[http://appearance.leanapp.cn/](http://appearance.leanapp.cn/)
+
 # Node.js Getting started
 
 一个简单的使用 Express 4 的 Node.js 应用。
